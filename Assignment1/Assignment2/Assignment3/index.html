@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard - API</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>👥 User Dashboard</h1>
+        <p>Public API Data using Fetch & Async/Await</p>
+    </header>
+
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Dashboard Summary -->
+        <div class="summary">
+
+            <div class="summary-card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Displayed Users</h3>
+                <p id="displayedUsers">0</p>
+            </div>
+
+        </div>
+
+
+        <!-- Search and Refresh -->
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search user by name..."
+            >
+
+            <button onclick="getUsers()">
+                🔄 Refresh Data
+            </button>
+
+        </div>
+
+
+        <!-- Loading Message -->
+        <div id="loading">
+            Loading user data...
+        </div>
+
+
+        <!-- Error Message -->
+        <div id="error"></div>
+
+
+        <!-- Users -->
+        <div id="userContainer"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
